@@ -115,11 +115,12 @@ export default function InteractiveTerminal() {
         break;
 
       case 'cv':
+        const cvPath = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/cv.pdf`;
         response = (
           <div className="text-xs">
             <p className="text-gray-300 mb-1">Descarga automática iniciada...</p>
             <a 
-              href="/cv.pdf" 
+              href={cvPath} 
               download="Curriculum_Pol_Carvajal.pdf"
               className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-mono font-bold underline"
             >
@@ -129,7 +130,7 @@ export default function InteractiveTerminal() {
         );
         // Trigger auto download
         const link = document.createElement('a');
-        link.href = '/cv.pdf';
+        link.href = cvPath;
         link.download = 'Curriculum_Pol_Carvajal.pdf';
         link.click();
         break;

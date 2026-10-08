@@ -142,7 +142,7 @@ export default function Hero() {
             </a>
 
             <a 
-              href="/cv.pdf" 
+              href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/cv.pdf`} 
               download="Curriculum_Pol_Carvajal.pdf"
               className="w-full sm:w-auto px-6 py-3 bg-[#16162a] border border-indigo-500/40 hover:border-indigo-400 text-indigo-200 hover:text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 text-sm shadow-[0_0_20px_rgba(99,102,241,0.15)] hover:shadow-[0_0_25px_rgba(99,102,241,0.3)]"
             >
