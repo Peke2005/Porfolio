@@ -4,7 +4,10 @@
 [![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)](https://react.js.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Live Demo](https://img.shields.io/badge/Demo_Online-peke2005.github.io/Porfolio-success?style=for-the-badge&logo=github)](https://peke2005.github.io/Porfolio/)
 
+> 🌐 **Web en directo:** [https://peke2005.github.io/Porfolio/](https://peke2005.github.io/Porfolio/)
+>
 > Portfolio web moderno e interactivo desarrollado con **Next.js 14 (App Router)**, **TypeScript** y **Tailwind CSS**. Diseñado para mostrar proyectos, habilidades técnicas, trayectoria formativa (3 titulaciones FP: SMR, DAM, DAW) y experiencia laboral.
 
 ---
