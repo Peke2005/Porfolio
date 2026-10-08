@@ -30,11 +30,18 @@ export default function InteractiveTerminal() {
     },
   ]);
 
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const terminalBodyRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const isFirstMount = useRef(true);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
+    }
+    if (terminalBodyRef.current) {
+      terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
+    }
   }, [history]);
 
   const handleCommand = (e: React.FormEvent) => {
@@ -237,7 +244,7 @@ export default function InteractiveTerminal() {
             </div>
 
             {/* Terminal History and Input */}
-            <div className="p-6 sm:p-7 min-h-[300px] max-h-[460px] overflow-y-auto space-y-4">
+            <div ref={terminalBodyRef} className="p-6 sm:p-7 min-h-[300px] max-h-[460px] overflow-y-auto space-y-4">
               {history.map((item, index) => (
                 <div key={index} className="space-y-1.5">
                   <div className="flex items-center gap-2 text-indigo-400">
@@ -269,8 +276,6 @@ export default function InteractiveTerminal() {
                   <CornerDownLeft size={13} />
                 </button>
               </form>
-
-              <div ref={bottomRef} />
             </div>
 
             {/* Terminal Footer Quick Suggestions */}
